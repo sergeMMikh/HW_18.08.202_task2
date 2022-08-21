@@ -32,4 +32,4 @@ class Chapter(models.Model):
 class ArticleChapter(models.Model):
     article = models.ForeignKey(Article, on_delete=models.CASCADE, related_name='scopes')
     tag = models.ForeignKey(Chapter, on_delete=models.CASCADE, related_name='scopes')
-    is_main = models.BooleanField(null=True)
+    is_main = models.BooleanField()
